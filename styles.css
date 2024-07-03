@@ -1,0 +1,57 @@
+/*Add Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+/*All Class using same dataset*/
+:root{
+    /* Define Variables*/
+    --accent : #FD6B6B; /* Button Color from Figma */
+    --accentHover : #FFA3A3; /* Mouse Hover --> Light*/
+    --dark60 : rgba(68, 90, 139, 0.6); /* 0.6 = 60% */
+    --light : #FFFFFF;
+    --transition : all 0.3s ease 0s /* Define delay time */
+}
+/*All Section*/
+*{
+    /* Clear margin and padding*/
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+
+้html, body{
+    height: 100%; /*Fixed Hight using Scroll*/
+    overflow: auto;
+}
+
+body{
+    /* Gradient Shade of Color */
+    /*background: linear-gradient(
+        var(--dark60), var(--dark60)
+    ),
+    url(./images/background.jpg);*/
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; /* Fixed Scale Screen*/
+}
+a, button, p{
+    font-family: "Lato", sans-serif;
+    color: var(--light);
+}
+
+a, button, .logo{
+    cursor: pointer; /*Link Element Logo & Button --> Hand Cursor*/
+}
+main{
+    height: 100;
+    display: grid; /* Work on grid*/
+    grid-template-columns: minmax(60px, 1fr) repeat(6, minmax(50px, 190px)) minmax(60px, 1fr);
+}
+header{
+    grid-column: 2 / span6; /*header start 2nd col and other last column*/
+}
+nav{
+    display: flex;
+    align-items: center;
+    height: 150px;
+}
